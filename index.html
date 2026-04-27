@@ -477,8 +477,7 @@ footer b{color:#4a8eff}
 <section id="teacher">
   <div class="teacher-wrap">
     <div class="teacher-photo-card reveal from-left">
-      <!-- 📸 GANTI DENGAN: <img src="assets/img/zaky.jpg" alt="Zaky" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px"> -->
-      <div class="photo-ph">FOTO</div>
+      <img src="assets/img/zaky.jpg" alt="Zaky" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px">
       <div class="mentor-badge">Gooners Leader</div>
     </div>
     <div class="teacher-text">
@@ -498,8 +497,7 @@ footer b{color:#4a8eff}
 <section id="coleader" style="background:#fff">
   <div class="teacher-wrap">
     <div class="teacher-photo-card reveal from-left">
-      <!-- 📸 GANTI DENGAN: <img src="assets/img/rafa.jpg" alt="Rafa" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px"> -->
-      <div class="photo-ph">FOTO</div>
+      <img src="assets/img/rafa.jpg" alt="Rafa" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px">
       <div class="mentor-badge">Co-Leader</div>
     </div>
     <div class="teacher-text">
@@ -664,17 +662,16 @@ footer b{color:#4a8eff}
 
 // ── DATA SISWA ──
 const students = [
-  // photo: isi dengan path foto, contoh "assets/img/students/ardra.jpg"
-  { name:"ARDRA SATRIA KRISTIONO PUTRA", role:"XII.9 Gooners", quote:"Pemuda anti goon",    photo:"", ig:"ardra_skp"    },
-  { name:"FAWWAZ MAULID AL BAHY",        role:"XII.9 Gooners", quote:"Obay gooners",         photo:"", ig:"cipaw_38"    },
-  { name:"FIQRI NASRULLOH",              role:"XII.9 Gooners", quote:"Gooning always",       photo:"", ig:"finhnyx"     },
-  { name:"MAULANA YUSUF",               role:"XII.9 Gooners", quote:"Quite gooning",        photo:"", ig:"maulan9447"  },
-  { name:"MUHAMMAD AUFAR ATHALA",        role:"XII.9 Gooners", quote:"Every day gooning",    photo:"", ig:"affar.athala"},
-  { name:"MUHAMMAD FACHRI",              role:"XII.9 Gooners", quote:"Big bos",              photo:"", ig:"fachri"      },
-  { name:"RAJA ALAMSYAH P.",             role:"XII.9 Gooners", quote:"Posible gooning",      photo:"", ig:"nuoojaa_"   },
-  { name:"RIFAT ALVARO S.",              role:"XII.9 Gooners", quote:"Gooning final bos",    photo:"", ig:"ribaaaat"    },
-  { name:"YUSRIL IHZA M.",               role:"XII.9 Gooners", quote:"Gooners leaders",      photo:"", ig:"srilizadra" },
-  { name:"ZACKY PUTRA A.T",             role:"XII.9 Gooners", quote:"Picu gooners",         photo:"", ig:"z_a_c_k_y__"},
+  { name:"ARDRA SATRIA KRISTIONO PUTRA", role:"XII.9 Gooners", quote:"Pemuda anti goon",    photo:"assets/img/students/ardra.jpg",   ig:"ardra_skp"    },
+  { name:"FAWWAZ MAULID AL BAHY",        role:"XII.9 Gooners", quote:"Obay gooners",         photo:"assets/img/students/fawwaz.jpg",  ig:"cipaw_38"    },
+  { name:"FIQRI NASRULLOH",              role:"XII.9 Gooners", quote:"Gooning always",       photo:"assets/img/students/fiqri.jpg",   ig:"finhnyx"     },
+  { name:"MAULANA YUSUF",               role:"XII.9 Gooners", quote:"Quite gooning",        photo:"assets/img/students/maulana.jpg", ig:"maulan9447"  },
+  { name:"MUHAMMAD AUFAR ATHALA",        role:"XII.9 Gooners", quote:"Every day gooning",    photo:"assets/img/students/aufar.jpg",   ig:"affar.athala"},
+  { name:"MUHAMMAD FACHRI",              role:"XII.9 Gooners", quote:"Big bos",              photo:"assets/img/students/fachri.jpg",  ig:"fachri"      },
+  { name:"RAJA ALAMSYAH P.",             role:"XII.9 Gooners", quote:"Posible gooning",      photo:"assets/img/students/raja.jpg",    ig:"nuoojaa_"   },
+  { name:"RIFAT ALVARO S.",              role:"XII.9 Gooners", quote:"Gooning final bos",    photo:"assets/img/students/rifat.jpg",   ig:"ribaaaat"    },
+  { name:"YUSRIL IHZA M.",               role:"XII.9 Gooners", quote:"Gooners leaders",      photo:"assets/img/students/yusril.jpg",  ig:"srilizadra" },
+  { name:"ZACKY PUTRA A.T",             role:"XII.9 Gooners", quote:"Picu gooners",         photo:"assets/img/students/zacky.jpg",   ig:"z_a_c_k_y__"},
 ];
 
 function initials(n){ return n.split(' ').map(w=>w[0]).join('').slice(0,2) }

@@ -259,8 +259,8 @@ section{padding:90px 6%}
 .g-plus{font-size:1.8rem;color:#fff;opacity:0;transition:opacity .3s}
 .g-item:hover .g-plus{opacity:1}
 .g-video-thumb{width:100%;height:100%;object-fit:cover;display:block}
-.g-play-icon{font-size:2.8rem;color:#fff;opacity:0;transition:opacity .3s;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
-.g-item:hover .g-play-icon{opacity:1}
+.g-item[data-src=""]{cursor:default}
+.g-item[data-src=""] .g-dim{display:none}
 
 /* ── LIGHTBOX ── */
 #lightbox{
@@ -682,7 +682,8 @@ function render(list){
       <div class="s-card-inner">
         <div class="s-front">
           ${s.photo
-            ? `<img class="s-photo" src="${s.photo}" alt="${s.name}">`
+            ? `<img class="s-photo" src="${s.photo}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">\
+               <div class="s-photo-init" style="display:none">${initials(s.name)}</div>`
             : `<div class="s-photo-init">${initials(s.name)}</div>`}
           <div class="s-info">
             <div class="s-name">${s.name}</div>
@@ -772,6 +773,7 @@ let lbScale = 1;
 function openLightbox(el){
   const type = el.dataset.type;
   const src  = el.dataset.src;
+  if(!src) return; // jangan buka kalau belum ada foto
   const lb   = document.getElementById('lightbox');
   const img  = document.getElementById('lb-img');
   const vid  = document.getElementById('lb-video');
